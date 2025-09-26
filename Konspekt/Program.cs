@@ -211,3 +211,25 @@ else
 }
     Console.WriteLine("The colour has maybe changed!!!!!");
 
+/* ISESEISEV ÜLESANNE */
+
+Console.WriteLine("Kas sa tahad ära mõõta pappkasti või õlitünni?");
+string valik = Console.ReadLine();
+if (valik == "pappkast")
+{
+
+    Console.WriteLine("Kas kast on kuubiku kujuline või risttahuka kujuline?");
+    int r =
+        int.Parse(Console.ReadLine());
+
+}
+else if (valik == "õlitünni")
+{
+
+    Console.WriteLine("Kas sa tead põhja raadiust (r) või põhja läbimõõtu (d)");
+    int r =
+        int.Parse(Console.ReadLine());
+
+
+}
+
