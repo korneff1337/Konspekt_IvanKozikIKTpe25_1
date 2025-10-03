@@ -279,7 +279,7 @@ Console.WriteLine("Eshkere");
 // WriteLine -> adresseritav funktsioon objektist Console
 // () -> sulupaar mis omab endas funktsioonile vajalikku infot
 //    -> saab kasutada ka if tingimuslauses oleva tingimuse piiramiseks, ehk teisisõnu "ifi parameeter"
-//    -> 
+//    -> kasutatakse ka matemaatuilistes tehtedes
 // [] -> tähistab massiive
 // {} -> koodiplokk, tavaliselt pärast tingimust või funktsiooni kirjeldust
 //    -> saab ka kasutada teksti sees muutujate kuvamiseks
