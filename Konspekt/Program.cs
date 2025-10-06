@@ -242,7 +242,7 @@ if (valik == "tünn")
     Console.WriteLine($"Sinu tünn mahutab {mahtV} \nTünni küljepindala on {küljepindala} \nKogupindala aga on {kogupindala}");
 }
 
-else if (valik == "kast")
+else if (valik == ("kast")
 {
     Console.WriteLine("Kas kast on kuubiku kujuline (k või risttahuka (r) kujuline?");
     string kastitüüp = Console.ReadLine();
@@ -310,3 +310,143 @@ int korrutamine = 1 * 1; // korrutamine, esimene arv korrutatakse teisega
 int jagamine = 1 / 1; // jagamine, esimene arv jagatakse teisega
 double astendamine = Math.Pow(2, 2); //astendamine, esimene arv astendatakse teisega
 double juurimine = Math.Sqrt(2); // ruutjuur, parameetriks arv mida juuritakse
+
+int arv = 0; //sobib
+string sõna = "abc"; //sobib
+//string string = "abc"
+
+//muutuja nimeks ei sobi järgnevad sõnad:
+//abstract, as, base, bool, break, byte, case,
+//catch, char, checked, class, const, continue, decimal,
+//default, delegate, do, double, else, enum, event,
+//explicit, extern, false, finally, fixed, float, for
+//forrach, goto, if, implicit, in , int,
+//interface, internal, is, lock, long, namespace, new,
+//null, object, operator, out, override, params,
+//private, protected, public, readonly, ref, return, sbyte,
+//sealed, short, sizeof, stackalloc, static, string, struct,
+//swtich, this, throw, true, try, typeof, uint,
+//ulong, unchecked, unsase, unshort, using, virtual, void,
+//volatile, while.
+
+//3. kalkulaator ifi ja else-ifiga, int ja string andmetüübid
+int liidetav1 = 0;
+// liidetava1 nime ees olev andmetüübi kirjeldus. iga koodilause lõppeb komakolooniga
+int liidetav2 = 0;
+// liidetava2 nime ees olev andmetüübi kirjeldus.iga koodilause lõppeb komakolooniga
+Console.WriteLine("Tere, palun sisesta esimene liidetav");
+// adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga
+liidetav1 = int.Parse(Console.ReadLine());
+// Sisestab ülevalt moodule ja funktsioonile teatud nimetust. iga koodilause lõppeb komakolooniga
+Console.WriteLine("Tere, palun sisesta teine liidetav: ");
+// adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga
+liidetav2 = int.Parse(Console.ReadLine());
+// Sisestab ülevalt moodule ja funktsioonile teatud nimetust. iga koodilause lõppeb komakolooniga
+//int liitmine = liidetav1 + liidetav2;
+// liitmine, kaks arvu kokku. iga koodilause lõppeb komakolooniga
+Console.WriteLine($"Tehte tulemus: {liitmine}");
+// adresseritav modul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga
+//Сonsole.WriteLine("Tehte tulemus: "+liitmine);
+// adresseritav modul ja funktsioon objektsist Console. iga koodilause lõppeb komakolooniga
+
+int lahutatav3 = 0;
+// lahutava3 nime ees olev andmetüübi kirjeldus. iga koodilause lõppeb komakolooniga
+int lahutatav4 = 0;
+// lautava4 nime ees olev andmetüübi kirjeldus. iga koodilause lõppeb komakolooniga
+Console.WriteLine("Tere, palun sisesta esimene liidetav");
+//adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga
+lahutatav3 = int.Parse(Console.ReadLine());
+// Sisestab ülevalt moodule ja funktsioonile teatud nimetust. iga koodilause lõppeb komakolooniga
+Console.WriteLine("Tere, palun sisesta teine liidetav: ");
+// adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga
+lahutatav4 = int.Parse(Console.ReadLine());
+// Sisestab ülevalt moodule ja funktsioonile teatud nimetust. iga koodilause lõppeb komakolooniga
+//int lahutamine = lahutatav3 - lahutatav4;
+// lahutamine, esimene arv maha teisest. iga koodilause lõppeb komakolooniga
+Console.WriteLine($"Tehte tulemus: {lahutamine}");
+// adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga
+Console.WriteLine("Tehte tulemus: " + lahutamine);
+// adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga
+
+
+int arv1 = 0;
+// täisarv. iga koodilause lõppeb komakolooniga ; .
+int arv2 = 0;
+// täisarv. iga koodilause lõppeb komakolooniga ; .
+Console.WriteLine("Tere, palun sisesta esimene arv: ");
+// adresseritav moodul ja funktsioon objektist Console, punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum
+// mis asub funktsiooni taga olevate sulgude vahel. iga koodilause lõppeb komakolooniga ; .
+arv1 = int.Parse(Console.ReadLine());
+// Sisestab ülevalt moodule ja funktsioonile teatud nimetust. Instantsieerime muutja "arv1", ning ütleme et sinna peab panna täisarve andmetüübigasõnaga int, selle muutuja sissse omistame tulemse
+// mille saame kasutajalt Console.ReadLine() abil (kasutame moodulist "Console" realugemisfunktsiooni), ning teisendame int andmetüübis
+// asuva funktsiooni "Parse" abil kasutajasisendi täisarvuks. iga koodilause lõppeb komakolooniga ; .
+Console.WriteLine("Tere, palun sisesta teine arv: ");
+// adresseritav moodul ja funktsioon objektist Console. punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum
+// mis asub funktsiooni taga olevate sulgude vahel. iga koodilause lõppeb komakolooniga ; .
+arv2 = int.Parse(Console.ReadLine());
+// Sisestab ülevalt moodule ja funktsioonile teatud nimetust. Instantsieerime muutja "arv1", ning ütleme et sinna peab panna täisarve andmetüübigasõnaga int, selle muutuja sissse omistame tulemse
+// mille saame kasutajalt Console.ReadLine() abil (kasutame moodulist "Console" realugemisfunktsiooni), ning teisendame int andmetüübis
+// asuva funktsiooni "Parse" abil kasutajasisendi täisarvuks. iga koodilause lõppeb komakolooniga ; .
+Console.WriteLine("Missugust tehet soovid teha? Kirjuta kas: + - / * ^");
+// adresseritav moodul ja funktsioon objektist Console. punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum
+// mis asub funktsiooni taga olevate sulgude vahel. iga koodilause lõppeb komakolooniga ; .
+string tehtetüüp = Console.ReadLine();
+// inimloetaval kujul tekst. iga koodilause lõppeb komakolooniga ; .
+int tehe = 0;
+// täisarv. Instantseerime muutuja tulemus, mille andmetüübiks on int, ja omistame talle esialgu väärtuse 0. iga koodilause lõppeb komakolooniga ; .
+
+if (tehtetüüp == "+")
+// teeme tingimuslause if, ning sulgude vahele kirjutame tingimuseks kontrolli, kas muutuja "tehtetüüp" sisu on samal kujul, kui sõne "+"
+{ // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus liites kokku
+
+    tehe = arv1 + arv2;
+
+    // muutuja arv1 ja muutuja arv2. iga koodilause lõppeb komakolooniga ; .
+} // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus liites kokku
+  
+Console.WriteLine($"{tehtetüüp} Tehte tulemus: {tehe}");
+// adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga ; .
+
+
+if (tehtetüüp == "-")
+// teeme tingimuslause if, ning sulgude vahele kirjutame tingimuseks kontrolli, kas muutuja "tehtetüüp" sisu on samal kujul, kui sõne "-"
+{// peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus lahutamises kokku
+
+    tehe = arv1 - arv2;
+    // muutuja arv1 ja muutuja arv2 sisu omavahel kokku. iga koodilause lõppeb komakolooniga ; .
+}   // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus lahutamises kokku
+
+Console.WriteLine($"{tehtetüüp} Tehte tulemus: {tehe}");
+// adresseritav moodul ja funktsioon objektist Console. iga koodilause lõppeb komakolooniga ; .
+
+
+if (tehtetüüp == "*")
+// teeme tingimuslause if, ning sulgude vahele kirjutame tingimuseks kontrolli, kas muutuja "tehtetüüp" sisu on samal kujul, kui sõne "*"
+{
+    // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus korrutamises kokku
+    tehe = arv1 * arv2;
+    // muutuja arv1 ja muutuja arv2 sisu omavahel kokku. iga koodilause lõppeb komakolooniga ; .
+}   // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus korrutamises kokku
+
+Console.WriteLine($"{tehtetüüp} Tehte tulemus: {tehe}");
+// adresseritav moodul ja funktsioon obektist Console. iga koodilause lõppeb komakolooniga ; .
+
+
+if (tehtetüüp == "/")
+// teeme tingimuslause if, ning sulgude vahele kirjutame tingimuseks kontrolli, kas muutuja "tehtetüüp" sisu on samal kujul, kui sõne "/"
+{
+    // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus jagamises kokku
+    tehe = arv1 / arv2;
+    // muutuja arv1 muutujaga arv2. iga koodilause lõppeb komakolooniga ; .
+}   // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus jagamises kokku
+
+if (tehtetüüp == "^")
+// teeme tingimuslause if, ning sulgude vahele kirjutame tingimuseks kontrolli, kas muutuja "tehtetüüp" sisu on samal kujul, kui sõne "^"
+{
+    // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus kasutades
+    // moodulist "Math" punkti abil funktsiooni "Pow()"; selle sees on arv1 astendatavana esimene parameeter, ning arv2 astendajana teine parameeter.
+    tehe = (int)Math.Pow(arv1, arv2);
+    // Funktsiooni ees on kiirteisendus kus funktsiooni väljund teisendatakse täisarvuks (int) abil. Iga koodilause lõppeb komakolooniga ; .
+}   // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus liites kokku
+Console.WriteLine($"{tehtetüüp} Tehte tulemus: {tehe}");
+// Adresseerime moodulit "Console", ning kasutame sealt funktsiooni "WriteLine" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus. Iga koodilause lõppeb komakolooniga ; .
