@@ -617,3 +617,67 @@ for (int k = 0; k < kogus; k++) // kaitstud sõna "for" alustab for tsüklit, p�
 {
     Console.WriteLine(k);       // antud juhul on tegevuseks muutuja "k" arvu väljakuvamine
 }
+// 4. foreach
+int[] arvuLoend = { 3, 89, 123412, 7, 67 }; //massiiv mida foreach tsükkel kasutab, või töötleb mingil kujul.
+foreach (var arvInLoend in arvuLoend) // kaitstud sõna foreach alustab foreach tsükli. Pärast mida on sulud, mille vahel tekitatakse
+                                      // ajutine muutuja andmetüübiga "var" töödeldava andmekogumi üksikelemendi jaoks. süntaksis olev
+                                      // kaitstud sõna "in" väljendab et tsükkel käib selle loendi elementide kohta, ning var "arvInLoend
+                                      // muutuja hoiab endas just peale sõna "in" oleva andmekogumi elementi. Tsüklil ei ole nähtavat
+                                      // tsüklimuutujat ega tingimust, tsükkel toimib niikaua kuni elemente jätkub ehk tsükli töö käib
+                                      // iga üksiku elemendi kohta andmekogumis. Tsüklil ei ole vaja tsüklimuutujat, kuna talle on
+                                      // sisse ehitatud vaikimisi elemndi järjestuse jälgimine. Niipalju kui andmeid on, ongi see,
+                                      // mitu korda tsükkel käivitatakse.
+{                                     // {} koodiplokk kus tehakse mingi tegevus
+    Console.WriteLine(arvInLoend);    // antud juhul kuvatakse välja ajutine muutuja, mille sees on loendi element. 
+}
+    }
+    /* meetodid */
+
+    // Meetodid on väljakutsutavad koodijupid. Meetodid teostavad tavaliselt mingeid funktsioone või tegevusi.
+    // Meetodid lasevad programmeerijal taaskasutada oma eelnevalt kirjutatud koodi - write once use many times.
+    // Meetodeid on kahte liiki - ühed, mis tagastavad andmeid mingisuguse töö tulemina, ja teised, mis ei tagasta
+    // midagi, kuid omavad siiski mingit tegevust.
+
+    // Meetodi signatuur:
+    // Meetodi signatuur koosneb mitmest kindalt äramääratud omadusest, nendeks on:
+    // - Juurdepääsu modifikaator mis ütleb ära, kust ja kuidas sellele meetodile juurde pääseda saab
+    //   public - meetod on avalik ja kättesaadav ka teistes klassides peale selle, kus meetod ise asub.
+    //   private - meetod on saadav ainult selles klassis, kus meetod ise asub.
+    //   protected - meetod on saadav ainult selles klassis, kus meetod ise asub ja kõikides klassides millen on pärilus
+    //               sellele klassile.
+    //   internal - meetod on saadav ainult selles klassis ja ainult selles failis.
+    // - Võib olla ka pandud static - meetod kuulub selle klassi juurde
+    // - Tagastustüüp on modifikaator mis ütleb ära, mis tüüpi andmeid meetod tagasi annab kutsumise asukohta.
+    //   Andmetüüp mida tagastada võib olla ükskõik milline liht või kombinatsioonandmetüüp, aga kui meetod ei tagasta
+    //   üldse andmeid, pannakse selle asemel andmetüübiks "void". Kui meetodil on tagastustüüp mis on midagi muud kui
+    //   void, on meetodi sees, iga toimiva koodisuuna lõpus, kaitstud sõna "return", return ütleb, et just see, on vaja
+    //   väljakutseasukohta tagastada, ning peale returni on muutuja nimi tagastatava infoga. Peale return lauset, ei
+    //   teostata mitte ühtegi muud meetodi sisu. Return toimib ka kui breakina, lõpetades siis aktiivse meetodi töö.
+
+    // 1. tüüpi meetod - ei tagasta midagi
+    public static void UusMeetod() //meetodi signatuur, mis omab juurdepääsumodifikaatorit "public", "static" ütleb et
+                                   //ta on selle klassi oma, tagastustüüp "void" ütleb et andmeid meie meetod ei tagasta
+                                   //ning pärast meetodi omadusi on meetodi nimi "UusMeetod" peale mida on sulud, kus
+                                   //parameetreid ei ole. 
+{                              //pärast signatuuri on koodiplokk meetodi koodiga {}
+    Console.WriteLine("Tere"); //Antud juhul meetod kuvab konsooli sõnumi.
+}
+// 2. tüüpi meetod - tagastab väärtuse
+int[] arvutatavadArvud = new int[] { 3, 67, 420 }; //Töödeldavad andmed, mis asuvad täisarvumassiivis, muutujanimega
+                                                   //"arvutatavadArvud.
+public static int ArvutaKokku(int[] arvud) //Meetod, mille signatuuris on juurdepääsumodifikaator public, static
+                                           //ütleb et meetod kuulub siia klassi, tagastustüüp "int" ütleb, et
+                                           //programmis väljakutseasukohta tagastatakse täisarv, peale seda on
+                                           //meetodi nimi "ArvutaKokku" ning sulgude vahel ootab meetod täisarvumassiivi
+                                           //millele pannakse meetodi sees ajutine nimi arvud. Peale signatuuri on
+                                           //koodiplokk {} tehtava koodiga.
+{
+    int summa = 0; //Tekitatakse täisarvuandmetüüpi muutuja nimega "summa", kuhu esialgu omistatakse arv 0.
+    foreach (int i in arvud) //foreach tsükliga käiakse kõik täisarvumassiivi "arvud" arvud läbi
+    {
+        summa += i; //ja muutujale summa lisatakse juurde, hetkel käidav element.
+    }
+    return summa; //pärast tsükli töö lõppu tagastakse "return" käsu abil, muutuja summa sisu.
+}
+    
+}
