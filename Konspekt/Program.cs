@@ -554,6 +554,29 @@ else if (true) { } //kaitstud sõnad else ja if (else if) kutsuvad esile sekunda
 else { } //kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas if või else if, ning mille koodiploki sisu
          //täidetakse kõikide if ja else if sees olevate tingimuste läbikukkumisel.
 
+int option = 3; // -------
+switch (option) //"switch" on kaitstud sõna alternatiivse tingimuskontrolli jaoks mida saab if else-if asemel kasutada.
+                //Sulgude vahele käib muutuja nimi, mille põhjal tingimuslik ümberlülitus toimub. Siin sulgude vahel
+                //ei ole tingimus ise, vaid kõigest kontrollitav muutuja, või omakorda sulgude vahel muu tingimus.
+{               //pärast lülitusvalikut tuleb koodiplokk
+    case 1:     //koodiploki sees on erinevad juhtumid. juhtumit kontrollitakse kaitstud sõna "case" abil. Antud juhul
+                //kontrollitakse, kas muutujas on väärtus 1, millele järgneb koolon ":"
+                //peale koolonit kirjeldatakse tehtav tegevus
+        break;  //ja kui tegevus on täidetud, väljutakse kogu switch tegevusest kaitstud sõna "break"iga. Peale "break"i
+                //on lauselõpumärk ";"
+    case 2:
+        break;
+    case 3:
+        break;
+    //juhtumeid võib olla mitmeid, antud juhul on neid kolm kindlalt, ja üks mida tehakse igal muul juhul.
+    default:    //kaitstud sõna "default" avab juhtumi kui muutujas ei ole mitte ühtegi muud "case" juhtumi tingimust.
+        break;  //Ka default lüppeb sõnaga "break;"
+}
+
+/* Sõne tööriistad jm tekstiga seotud */
+string alfa = "a\nb";    // \n -> tekitab ühe sõne sisse reamurde, sõne kus on üks "\n" omab kahte rida
+string beta = $"a {alfa} b"; // $  -> lubab kasutada muutujaid loogeliste sulgude vahel otse teksti sees
+
 /* Loogilised tehted */
 //&& -> "and" loogiline tehe, mida kasutatakse tingimuste kirjutamisel, ning mis annab positiivse vastuse (true) juhul kui
 //      mõlemal pool && märki olevad tingimused on täidetud. Kui üks neist ei ole, siis annab negatiivse vastuse (false).
@@ -630,7 +653,6 @@ foreach (var arvInLoend in arvuLoend) // kaitstud sõna foreach alustab foreach 
 {                                     // {} koodiplokk kus tehakse mingi tegevus
     Console.WriteLine(arvInLoend);    // antud juhul kuvatakse välja ajutine muutuja, mille sees on loendi element. 
 }
-    }
     /* meetodid */
 
     // Meetodid on väljakutsutavad koodijupid. Meetodid teostavad tavaliselt mingeid funktsioone või tegevusi.
@@ -678,6 +700,4 @@ public static int ArvutaKokku(int[] arvud) //Meetod, mille signatuuris on juurde
         summa += i; //ja muutujale summa lisatakse juurde, hetkel käidav element.
     }
     return summa; //pärast tsükli töö lõppu tagastakse "return" käsu abil, muutuja summa sisu.
-}
-    
 }
