@@ -480,7 +480,7 @@ if (ostusumma > 100)
 { // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus liites kokku
     Console.WriteLine("Saad 20% allahindlust");
 } // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus liites kokku
-else if (ostusumma > 101 &&ostusumma > 50)
+else if (ostusumma < 101 &&ostusumma > 50)
 { // peale tingimust on koodiplokk {} loogeliste sulgude vahel. koodiplokk sisesldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtus liites kokku
     Console.WriteLine("Saad 10% allahindlust");
     // adresseritav moodul ja funktsioon objektist Console. punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum
